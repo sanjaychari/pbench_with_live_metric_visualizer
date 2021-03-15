@@ -23,3 +23,7 @@ This repository is a tool to run the pbench v0.71.0 container(quay.io/pbench/pbe
 11. Go to port 3000 of your system on your browser and log into the Grafana interface with username and password 'admin', and you should be able to see the Node Exporter and   dcgm dashboards.
 
 If you want to run a different command apart from "sleep 1800" as pbench_user_benchmark, change command under the pbench service in the docker-compose.yml file.
+
+# Cleanup
+
+Run ``` podman-compose down ``` to remove all containers related to the run.
