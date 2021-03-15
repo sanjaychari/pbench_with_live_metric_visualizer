@@ -1,0 +1,21 @@
+version: "3"
+services:
+
+    pbench:
+      image: quay.io/pbench/pbench-agent-tools-centos-8:alpha
+      ports:
+        - "9090:9090"
+        - "8000:8000"
+        - "9100:9100"
+      volumes:
+        - ./run_benchmark.sh:/run_benchmark.sh,Z
+        - ./dcgm:/usr/local/dcgm,Z
+        - ./node_exporter:/usr/local/node_exporter,Z
+      security_opt:
+        - label=type:nvidia_container_t
+      network_mode: "host"
+      command: ./run_benchmark.sh sleep 1800
+
+    live-metric-visualizer:
+      image: quay.io/pbench/live-metric-visualizer:latest
+      network_mode: "host"
