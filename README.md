@@ -11,11 +11,12 @@ This repository is a tool to run the pbench v0.71.0 container(quay.io/pbench/pbe
 # Instructions
 
 1. Run ``` git clone https://github.com/sanjaychari/pbench_with_live_metric_visualizer ```
-3. Run ``` cd pbench_with_live_metric_visualizer ```
-4. Run ``` sudo mkdir -p dcgm; sudo cp -r /usr/local/dcgm/bindings ./dcgm ```
-5. Run ``` sudo mkdir -p dcgm/samples;sudo mkdir -p dcgm/samples/scripts ```
-6. Run ``` sudo cp -r dcgm/bindings/* dcgm/samples/scripts ```
-7. Run ``` wget https://github.com/prometheus/node_exporter/releases/download/v1.0.1/node_exporter-1.0.1.linux-amd64.tar.gz ```
+2. Run ``` cd pbench_with_live_metric_visualizer ```
+3. Run ``` sudo mkdir -p dcgm; sudo cp -r /usr/local/dcgm/bindings ./dcgm ```
+4. Run ``` sudo mkdir -p dcgm/samples;sudo mkdir -p dcgm/samples/scripts ```
+5. Run ``` sudo cp -r dcgm/bindings/* dcgm/samples/scripts ```
+6. Run ``` wget https://github.com/prometheus/node_exporter/releases/download/v1.0.1/node_exporter-1.0.1.linux-amd64.tar.gz ```
+7. Run ``` tar xvfz node_exporter-*.*-amd64.tar.gz ```
 8. Run ``` mv node_exporter-1.0.1.linux-amd64 node_exporter ```
 9. Download datacenter-gpu-manager-2.0.13-1-x86_64.rpm from https://developer.nvidia.com/dcgm#Downloads and move it into this directory.
 10. Run ``` podman-compose up --build ```
