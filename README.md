@@ -10,17 +10,15 @@ This repository is a tool to run the pbench v0.71.0 container(quay.io/pbench/pbe
 
 # Instructions
 
-1. Run ''' 
-git clone https://github.com/sanjaychari/pbench_with_live_metric_visualizer 
-'''
-3. Run ''' cd pbench_with_live_metric_visualizer '''
-4. Run ''' sudo mkdir -p dcgm; sudo cp -r /usr/local/dcgm/bindings ./dcgm '''
-5. Run ''' sudo mkdir -p dcgm/samples;sudo mkdir -p dcgm/samples/scripts '''
-6. Run '''sudo cp -r dcgm/bindings/* dcgm/samples/scripts'''
-7. Run ''' wget https://github.com/prometheus/node_exporter/releases/download/v1.0.1/node_exporter-1.0.1.linux-amd64.tar.gz '''
-8. Run ''' mv node_exporter-1.0.1.linux-amd64 node_exporter '''
+1. Run ``` git clone https://github.com/sanjaychari/pbench_with_live_metric_visualizer ```
+3. Run ``` cd pbench_with_live_metric_visualizer ```
+4. Run ``` sudo mkdir -p dcgm; sudo cp -r /usr/local/dcgm/bindings ./dcgm ```
+5. Run ``` sudo mkdir -p dcgm/samples;sudo mkdir -p dcgm/samples/scripts ```
+6. Run ``` sudo cp -r dcgm/bindings/* dcgm/samples/scripts ```
+7. Run ``` wget https://github.com/prometheus/node_exporter/releases/download/v1.0.1/node_exporter-1.0.1.linux-amd64.tar.gz ```
+8. Run ``` mv node_exporter-1.0.1.linux-amd64 node_exporter ```
 9. Download datacenter-gpu-manager-2.0.13-1-x86_64.rpm from https://developer.nvidia.com/dcgm#Downloads and move it into this directory.
-10. Run ''' podman-compose up --build '''
+10. Run ``` podman-compose up --build ```
 11. Go to port 3000 of your browser and log into the Grafana interface with username and password 'admin', and you should be able to see the Node Exporter and   dcgm dashboards.
 
 If you want to run a different command apart from "sleep 1800" as pbench_user_benchmark, change command under the pbench service in the docker-compose.yml file.
