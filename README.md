@@ -20,6 +20,6 @@ This repository is a tool to run the pbench v0.71.0 container(quay.io/pbench/pbe
 8. Run ``` mv node_exporter-1.0.1.linux-amd64 node_exporter ```
 9. Download datacenter-gpu-manager-2.0.13-1-x86_64.rpm from https://developer.nvidia.com/dcgm#Downloads and move it into this directory.
 10. Run ``` podman-compose up --build ```
-11. Go to port 3000 of your browser and log into the Grafana interface with username and password 'admin', and you should be able to see the Node Exporter and   dcgm dashboards.
+11. Go to port 3000 of your system on your browser and log into the Grafana interface with username and password 'admin', and you should be able to see the Node Exporter and   dcgm dashboards.
 
 If you want to run a different command apart from "sleep 1800" as pbench_user_benchmark, change command under the pbench service in the docker-compose.yml file.
